@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1082277238738",
+    "project_id": "todoebloc",
+    "storage_bucket": "todoebloc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082277238738:android:0a638a79faa48e9e67da0b",
+        "android_client_info": {
+          "package_name": "io.github.naimurhasan.flutter_todoebloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082277238738-vauq5nqmfaikl1rllqg0qr3thjsf9ctt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPb-ZF2br4IvbOeil6We-bvYN1iprpaSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082277238738-vauq5nqmfaikl1rllqg0qr3thjsf9ctt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
