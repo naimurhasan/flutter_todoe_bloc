@@ -1,5 +1,7 @@
 # flutter_todoebloc
 
+![screenshot 1](screenshot_1.jpg)
+
 A new Flutter application.
 
 ## Getting Started

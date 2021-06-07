@@ -17,7 +17,7 @@ class MyHomePage extends StatelessWidget {
       ),
       body: TwoColumnGridView(
         itemBuilder: (BuildContext context, index) {
-          return NoteCardView(Note("$index", ""));
+          return NoteCardView(Note("Note Tile", "This is the Note Details"));
         },
       ),
       floatingActionButton: FloatingActionButton(
