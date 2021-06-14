@@ -3,6 +3,9 @@ import 'package:flutter_todoebloc/src/ui/components/forms/ActionButton.dart';
 import 'package:flutter_todoebloc/src/ui/components/forms/PrimaryTextField.dart';
 
 class AddNoteScreen extends StatelessWidget {
+  String _name;
+  String _details;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,4 +37,6 @@ class AddNoteScreen extends StatelessWidget {
       ),
     );
   }
+
+  _onAddTap() {}
 }

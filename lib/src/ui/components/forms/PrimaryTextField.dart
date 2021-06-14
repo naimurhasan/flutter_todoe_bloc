@@ -4,8 +4,10 @@ class PrimaryTextField extends StatelessWidget {
   final int maxLength;
   final int maxLines;
   final String label;
+  final Function onChnage;
 
-  const PrimaryTextField({Key key, this.maxLength, this.maxLines, this.label})
+  const PrimaryTextField(
+      {Key key, this.maxLength, this.maxLines, this.label, this.onChnage})
       : super(key: key);
 
   @override
@@ -19,6 +21,7 @@ class PrimaryTextField extends StatelessWidget {
         border: OutlineInputBorder(
             borderSide: BorderSide(color: Colors.greenAccent, width: 5.0)),
       ),
+      onChanged: this.onChnage,
     );
   }
 }
