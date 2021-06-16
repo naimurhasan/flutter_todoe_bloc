@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_todoebloc/src/blocs/note/note_bloc.dart';
+import 'package:flutter_todoebloc/src/blocs/note/note_event.dart';
 import 'package:flutter_todoebloc/src/ui/components/forms/ActionButton.dart';
 import 'package:flutter_todoebloc/src/ui/components/forms/PrimaryTextField.dart';
 
 class AddNoteScreen extends StatelessWidget {
-  String _name;
+  String _title;
   String _details;
 
   @override
@@ -22,16 +25,32 @@ class AddNoteScreen extends StatelessWidget {
         child: Column(
           children: [
             PrimaryTextField(
-              label: "Name",
+              label: "Title",
               maxLines: 1,
               maxLength: 50,
+              onChnage: (String val) {
+                _title = val;
+              },
             ),
             PrimaryTextField(
               label: "Details",
               maxLines: 2,
               maxLength: 500,
+              onChnage: (String val) {
+                _details = val;
+              },
             ),
-            ActionButton(" Add ")
+            ActionButton(
+              "Add",
+              onTap: () {
+                // Add to Firestore
+                BlocProvider.of<NoteBloc>(context)
+                    .add(AddEvent(title: _title, details: _details));
+
+                // Exit The Popup
+                Navigator.pop(context);
+              },
+            )
           ],
         ),
       ),

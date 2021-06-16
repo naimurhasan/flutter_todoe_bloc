@@ -11,10 +11,20 @@ class NoteRepository {
     await _db.add(note.toJson());
   }
 
+  // delete note
+  deleteNote(id) async {
+    final note = _db.doc(id);
+    await note.delete();
+  }
+
   // Get list of all Note
   Future<List<Note>> getNotes() async {
     var data = await _db.get();
-    var notes = data.docs.map((note) => Note.fromJson(note.data())).toList();
+
+    var notes = data.docs.map((note) {
+      return Note.fromJson(note.data(), id: note.id);
+    }).toList();
+
     return notes;
   }
 }
